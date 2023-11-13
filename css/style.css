@@ -1,0 +1,14 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    padding: 1rem;
+}
+
+#km input{
+    width: 16rem;
+}
