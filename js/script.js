@@ -6,29 +6,28 @@
 // - va applicato uno sconto del 53.27% per gli over 65.
 
 
-const priceGas = 0.1976 ;
 
-const discountMinor =  17.65 ;
-
-const discountOld = 53.27;
-
-const element = document.getElementById('train-ticket')
-
-const kmElement = document.getElementById ('km')  
-
-const ageElement = document.getElementById ('age')
-
-let kmForPrice = kmElement * priceGas
-
-
-const buttonElement = document.querySelector ('button');
-
-console.log (element)
+const buttonElement = document.querySelector('button');
 
 buttonElement.addEventListener ('click' , function (){
-     
-     alert ('la vita rimasta è 88');
-     } ) 
+    const km = document.getElementById('km-number').value;
+    const age = document.getElementById('age-passenger').value;
+
+    const priceGas = 0.1976 ;
+    let kmForPrice = (km * priceGas);
+ 
+    const ageMinor = <18;
+    const discountMinor =  17.65 ;
+    const ageOld = >65;
+    const discountOld = 53.27;
+
+    if (ageMinor === true ) {
+        kmForPrice = kmForPrice - ( kmForPrice * discountMinor / 100);
+    }
+    else if (ageOld === true){
+        kmForPrice = kmForPrice - ( kmForPrice * discountOld / 100);
+    }
+} ) 
 
 
     
