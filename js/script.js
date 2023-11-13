@@ -16,9 +16,9 @@ buttonElement.addEventListener ('click' , function (){
     const priceGas = 0.1976 ;
     let kmForPrice = (km * priceGas);
  
-    const ageMinor = <18;
+    const ageMinor = age < 18;
     const discountMinor =  17.65 ;
-    const ageOld = >65;
+    const ageOld = age > 65;
     const discountOld = 53.27;
 
     if (ageMinor === true ) {
@@ -27,6 +27,9 @@ buttonElement.addEventListener ('click' , function (){
     else if (ageOld === true){
         kmForPrice = kmForPrice - ( kmForPrice * discountOld / 100);
     }
+    console.log(kmForPrice)
+
+    document.getElementById ('train-ticket') .innerHTML += 'the price is:' + kmForPrice.toFixed(2) + 'euro'; 
 } ) 
 
 
